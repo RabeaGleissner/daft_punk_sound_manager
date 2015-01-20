@@ -25,6 +25,9 @@ body {
 a {
   color:white;
 }
+.instructions {
+  color:deeppink;
+}
 
 footer {
   width:80%;
