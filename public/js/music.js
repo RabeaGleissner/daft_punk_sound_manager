@@ -1,3 +1,5 @@
+$(document).ready(function(){
+   
 var myPlayer = myPlayer || {};
 myPlayer._currentSound = null;
 var clickId = null;
@@ -8,7 +10,6 @@ myPlayer.setup = function(){
 
 myPlayer.play = function(ev) {
   ev.preventDefault();
-  console.log('clicked id' + ev.currentTarget.id);
   clickId = ev.currentTarget.id;
   var sound = myPlayer.getSound(clickId);
   sound.play();
@@ -28,7 +29,8 @@ myPlayer.getSound = function(clickId){
 soundManager.setup({
   url: '/swf/',
   preferFlash: true,
-  onready: myPlayer.setup 
+  onready: myPlayer.setup
+});
 });
 
 
